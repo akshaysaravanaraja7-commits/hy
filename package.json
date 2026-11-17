@@ -1,0 +1,12 @@
+{
+  "name": "astra-ai",
+  "version": "1.1.0",
+  "private": true,
+  "description": "ASTRA AI — Embedded Full-Stack Companion AI",
+  "scripts": {
+    "start": "python run.py",
+    "build": "npm --prefix frontend run build && node -e \"require('fs').cpSync('frontend/dist', 'backend/static', {recursive: true})\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "cd backend && uvicorn main:app --reload --port 8000"
+  }
+}
